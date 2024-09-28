@@ -46,7 +46,7 @@ public class MyArrays {
     System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
     System.out.print("Are the arrays the same? ");
     System.out.println(test == returnCopy(test));
-      int[] copy = returnCopy(test);
+    copy = returnCopy(test);
     test[0] = 0;
     System.out.println("Changed first array: " + aryToString(test) + " copy: " + aryToString(returnCopy(test)));
 
