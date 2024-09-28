@@ -40,13 +40,13 @@ public class MyArrays {
     System.out.print("Are the arrays the same? ");
     System.out.println(test == returnCopy(test));
     test[0] = 2;
-    System.out.println("Changed first array: " + aryToString(test) + " copy: " + aryToString(returnCopy(test)))
+    System.out.println("Changed first array: " + aryToString(test) + " copy: " + aryToString(returnCopy(test)));
     test = new int[]{10, 20, 40, 30, 50};
     System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
     System.out.print("Are the arrays the same? ");
     System.out.println(test == returnCopy(test));
     test[0] = 0;
-    System.out.println("Changed first array: " + aryToString(test) + " copy: " + aryToString(returnCopy(test))
+    System.out.println("Changed first array: " + aryToString(test) + " copy: " + aryToString(returnCopy(test)));
 
     int[] test1 = new int[] {1, 3, 5};
     int[] test2 = new int[] {6, 8, 10};
