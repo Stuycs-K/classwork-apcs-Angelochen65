@@ -1,5 +1,10 @@
 public class MyArrays {
   public static int[] returnCopy (int[]ary){
+    int[] newAry = new int[ary.length];
+    for (int i = 0; i < ary.length; i++){
+      newAry[i] = ary[i];
+    }
+    return newAry;
 
   }
   public static void main(String[] args){
