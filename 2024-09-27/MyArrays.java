@@ -22,7 +22,7 @@ public class MyArrays {
     int[] test = new int[] {1,2,3,4,5};
 
     System.out.print("Are the arrays equal ?");
-    System.out.println(test == returnCopy(test));
+    System.out.println(test != returnCopy(test));
     System.out.print(aryToString(test));
     System.out.print(aryToString(returnCopy(test)));
   }
