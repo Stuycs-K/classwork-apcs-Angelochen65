@@ -22,11 +22,11 @@ public class MyArrays {
     int[] test = new int[] {1,2,3,4,5};
     System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
     System.out.print("Are the arrays the same? ");
-    System.out.print(test == returnCopy(test));
+    System.out.println(test == returnCopy(test));
     test = new int[]{10, 20, 40, 30, 50};
     System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
     System.out.print("Are the arrays the same? ");
-    System.out.print(test == returnCopy(test));
+    System.out.println(test == returnCopy(test));
 
   }
 }
