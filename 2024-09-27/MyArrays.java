@@ -19,7 +19,9 @@ public class MyArrays {
 
   }
 
-  public static int[] concatArray (int[]ary1, int[]ary2)
+  public static int[] concatArray (int[]ary1, int[]ary2){
+    int[] tgt = new int[ary1.length + ary2.length];
+  }
   public static void main(String[] args){
     int[] test = new int[] {1,2,3,4,5};
     System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
