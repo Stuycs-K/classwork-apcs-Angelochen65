@@ -49,7 +49,7 @@ public class MyArrays {
     System.out.println("Expected: " +
       (aryToString(test1)).substring(0, aryToString(test1).length() - 1) + ", " +
       (aryToString(test2).substring(1)));
-    System.out.print(" actual: " + concatArray(test1, test2));
+    System.out.print(" actual: " + aryToString(concatArray(test1, test2)));
 
 
   }
