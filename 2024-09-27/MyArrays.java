@@ -20,7 +20,7 @@ public class MyArrays {
   }
 
   public static int[] concatArray (int[]ary1, int[]ary2){
-    int index = 1;
+    int index = 0;
     int[] tgt = new int[ary1.length + ary2.length];
     for(int i = 0; i < ary1.length; i++){
       tgt[i] = ary1[i];
