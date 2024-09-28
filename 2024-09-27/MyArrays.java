@@ -20,9 +20,9 @@ public class MyArrays {
   }
   public static void main(String[] args){
     int[] test = new int[] {1,2,3,4,5};
-    System.out.print("Expected: " + aryToString(test) + "actual: " + aryToString(returnCopy(test)));
+    System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
     System.out.print("Are the arrays the same?");
-    System.out.println(test == returnCopy(test));
+    System.out.print(test == returnCopy(test));
 
   }
 }
