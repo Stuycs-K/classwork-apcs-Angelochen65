@@ -24,5 +24,6 @@ public class MyArrays {
     System.out.print("Are the arrays equal ?");
     System.out.println(test == returnCopy(test));
     System.out.print(aryToString(test));
+    System.out.print(aryToString(returnCopy(test)));
   }
 }
