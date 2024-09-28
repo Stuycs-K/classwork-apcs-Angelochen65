@@ -50,8 +50,8 @@ public class MyArrays {
       (aryToString(test1)).substring(0, aryToString(test1).length() - 1) + ", " +
       (aryToString(test2).substring(1)));
     System.out.println(" actual: " + aryToString(concatArray(test1, test2)));
-    int[] test1 = new int[] {1, 11, 9};
-    int[] test2 = new int[] {8, 7, 15};
+    test1 = new int[] {1, 11, 9};
+    test2 = new int[] {8, 7, 15};
     System.out.print("Expected: " +
       (aryToString(test1)).substring(0, aryToString(test1).length() - 1) + ", " +
       (aryToString(test2).substring(1)));
