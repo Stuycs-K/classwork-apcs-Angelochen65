@@ -46,12 +46,13 @@ public class MyArrays {
     System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
     System.out.print("Are the arrays the same? ");
     System.out.println(test == returnCopy(test));
+      int[] copy = returnCopy(test);
     test[0] = 0;
     System.out.println("Changed first array: " + aryToString(test) + " copy: " + aryToString(returnCopy(test)));
 
     int[] test1 = new int[] {1, 3, 5};
     int[] test2 = new int[] {6, 8, 10};
-    System.out.print("Expected: " +
+    System.out.print("\n Expected: " +
       (aryToString(test1)).substring(0, aryToString(test1).length() - 1) + ", " +
       (aryToString(test2).substring(1)));
     System.out.println(" actual: " + aryToString(concatArray(test1, test2)));
