@@ -23,7 +23,7 @@ public class MyArrays {
     System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
     System.out.print("Are the arrays the same? ");
     System.out.print(test == returnCopy(test));
-    test = {10, 20, 40, 30, 50};
+    test = new int[]{10, 20, 40, 30, 50};
     System.out.println("Expected: " + aryToString(test) + " actual: " + aryToString(returnCopy(test)));
     System.out.print("Are the arrays the same? ");
     System.out.print(test == returnCopy(test));
