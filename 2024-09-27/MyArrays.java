@@ -36,7 +36,7 @@ public class MyArrays {
     int[] test1 = new int[] {1, 3, 5};
     int[] test2 = new int[] {6, 8, 10};
     System.out.println("Expected: " +
-      (aryToString(test1)).substring(0, test1.length - 1) +
+      (aryToString(test1)).substring(0, aryToString(test) - 1) +
       (aryToString(test2).substring(1)));
 
 
