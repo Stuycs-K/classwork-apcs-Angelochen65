@@ -20,7 +20,18 @@ public class MyArrays {
   }
 
   public static int[] concatArray (int[]ary1, int[]ary2){
+    int index = 1;
     int[] tgt = new int[ary1.length + ary2.length];
+    for(int i = 0; i < ary1.length; i++){
+      tgt[i] = ary1[i];
+      index++;
+
+    }
+    for(int i = 0; i < ary2.length; i++){
+      tgt[index] = ary2[i];
+      index++;
+    }
+
     return tgt;
   }
   public static void main(String[] args){
@@ -38,6 +49,7 @@ public class MyArrays {
     System.out.println("Expected: " +
       (aryToString(test1)).substring(0, aryToString(test1).length() - 1) + ", " +
       (aryToString(test2).substring(1)));
+    System.out.print(" actual: " + concatArray(test1, test2));
 
 
   }
