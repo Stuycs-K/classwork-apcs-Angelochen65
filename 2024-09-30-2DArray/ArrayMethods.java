@@ -2,6 +2,7 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
   public static void main(String[] args) {
     int[] arr1 = {1,2,3,4};
     System.out.println(aryToString(arr1));
+    int[][] arr2 = {arr1,{3,4,5,6},{1,2,5,6},{}};
   }
 
   public static String aryToString (int[]ary){
@@ -25,7 +26,11 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
   */
 public static String arrToString(int[][]ary){
   //this should use arrToString(int[])
-  return "";
+  String result = "";
+  for (int i = 0; i < ary.length; i++){
+    result+=aryToString(ary[i]);
+  }
+  return result;
 }
 
 /*Return the sum of all of the values in the 2D array */
