@@ -1,11 +1,12 @@
 public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen, ivanc178@nycstudents.net
   public static void main(String[] args) {
-    int[] arr1 = {1,2,3,4};
-    System.out.println(aryToString(arr1));
-    int[][] arr2 = {arr1,{3,4,5,6},{1,2,5,6},{}};
+    int[] arr1 = {2,3,4,9};
+    System.out.println(arrToString(arr1));
+    int[][] arr2 = {{2,3,4}, {5,6,7}, {2,4,9}};
+    System.out.println(arrToString(arr2));
   }
 
-  public static String aryToString (int[]ary){
+  public static String arrToString (int[]ary){
    String end = "[";
    for(int i = 0; i < ary.length; i++){
      end+= ary[i];
