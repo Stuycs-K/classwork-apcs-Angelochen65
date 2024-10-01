@@ -4,7 +4,7 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     int[][] arr2 = {{2,3,4}, {5,6,7}, {2,4,9}};
     int[][] arr3 = {{3,4}, {5,6,7}, {}};
     int[][] arr4 = {{1, 2, 3}, {4, 5, 6}};
-    int[][] arr4 = {{1, 2}, {4, 5}, {6, 7}, {8,9}};
+    int[][] arr5= {{1, 2}, {4, 5}, {6, 7}, {8,9}};
 
 
     System.out.println("Previous arrToString: ");
@@ -27,10 +27,10 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
 
     System.out.println("Testing swapRC");
     System.out.println("Expected: [[1, 4], [2, 5], [3, 6]]");
-    System.out.println(arrToString(swapRC(arr3)));
+    System.out.println(arrToString(swapRC(arr4)));
     System.out.println("Testing swapRC");
     System.out.println("Expected: [[1, 4, 6, 8], [2, 5, 7, 9]]");
-    System.out.println(arrToString(swapRC(arr4)));
+    System.out.println(arrToString(swapRC(arr5)));
   }
 
   public static String arrToString (int[]ary){
