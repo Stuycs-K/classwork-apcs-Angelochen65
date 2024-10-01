@@ -8,7 +8,7 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
 
 
     System.out.println("Previous arrToString: ");
-    System.out.println("Expected: [2,3,4,9]  vs Actual: ");
+    System.out.println("Expected: [2, 3, 4, 9]  vs Actual: ");
     System.out.println(arrToString(arr1));
 
     System.out.println("Testing new arrToString");
