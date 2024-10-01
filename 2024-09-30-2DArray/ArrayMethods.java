@@ -44,7 +44,7 @@ public static String arrToString(int[][]ary){
 public static int arr2DSum(int[][]nums){
   int sums = 0;
   for(int i = 0; i< nums.length; i++){
-    for int(a = 0; a < nums[i].length; a++){
+    for (int a = 0; a < nums[i].length; a++){
       sums+= nums[i][a];
     }
   }
