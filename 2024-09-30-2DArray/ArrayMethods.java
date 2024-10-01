@@ -6,7 +6,7 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     System.out.println(arrToString(arr2));
     System.out.println(arr2DSum(arr2));
     System.out.println(42);
-    int[][] arr3 = {{0, 1, 2}, {3, 4, 5}};
+    int[][] arr3 = {{1, 2, 3}, {4, 5, 6}};
     System.out.println(arrToString(swapRC(arr3)));
   }
 
