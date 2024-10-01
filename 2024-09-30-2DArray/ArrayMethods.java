@@ -6,6 +6,8 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     System.out.println(arrToString(arr2));
     System.out.println(arr2DSum(arr2));
     System.out.println(42);
+    int[][] arr3 = {{0, 1, 2}, {3, 4, 5}};
+    System.out.println(arrToString(swapRC(arr3)));
   }
 
   public static String arrToString (int[]ary){
@@ -57,6 +59,11 @@ public static int arr2DSum(int[][]nums){
   * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
   */
 public static int[][] swapRC(int[][]nums){
-  return new int[1][1];
-}
+  int[][] arr = new int[nums[0].length][nums.length];
+  for(int i = 0; i < nums[0].length; i++){
+    for(int a= 0; a < nums.length; a++){
+      arr[i][a] = nums[a][i];
+    }
+  }
+  return arr;
 }
