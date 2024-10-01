@@ -58,11 +58,16 @@ public static int arr2DSum(int[][]nums){
   * You may assume the array is rectangular and neither rows nor cols is 0.
   * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
   */
-public static int[][] swapRC(int[][]nums){
-  int[][] arr = new int[nums[0].length][nums.length];
-  for(int i = 0; i < nums[0].length; i++){
-    for(int a= 0; a < nums.length; a++){
+  public static int[][] swapRC(int[][]nums){
+         int a = 0;
+   int[][] arr = new int[nums[0].length][nums.length];
+         while(a< nums[0].length-1){
+   for(int i = 0; i < nums[0].length; i++){
+
       arr[i][a] = nums[a][i];
-    }
-  }
-  return arr;}
+   }
+   a++;
+         }
+
+   return arr;
+ }
