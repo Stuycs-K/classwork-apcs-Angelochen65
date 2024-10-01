@@ -19,10 +19,10 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     System.out.println(arrToString(arr3));
 
     System.out.println("Testing arr2DSum =");
-    Sysmte.out.println("Expected: 42    vs  Actual: ");
+    System.out.println("Expected: 42    vs  Actual: ");
     System.out.println(arr2DSum(arr2));
     System.out.println("Testing arr2DSum");
-    Sysmte.out.println("Expected: 25    vs  Actual: ");
+    System.out.println("Expected: 25    vs  Actual: ");
     System.out.println(arr2DSum(arr3));
 
     System.out.println("Testing swapRC");
