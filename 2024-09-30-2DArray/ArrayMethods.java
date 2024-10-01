@@ -3,8 +3,8 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     int[] arr1 = {2,3,4,9};
     int[][] arr2 = {{2,3,4}, {5,6,7}, {2,4,9}};
     int[][] arr3 = {{3,4}, {5,6,7}, {}};
-    int[][] arr4 = {{1, 2, 3}, {4, 5, 6}};
-    int[][] arr5= {{1, 2}, {4, 5}, {6, 7}, {8,9}};
+    int[][] arr4 = {{1,2,3}, {4,5,6}};
+    int[][] arr5= {{1,2}, {4,5}, {6,7}, {8,9}};
 
 
     System.out.println("Previous arrToString: ");
@@ -12,10 +12,10 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     System.out.println(arrToString(arr1));
 
     System.out.println("Testing new arrToString");
-    System.out.println("Expected: [[2,3,4], [5,6,7], [2,4,9]]  vs  Actual: ");
+    System.out.println("Expected: [[2, 3 ,4], [5, 6, 7], [2, 4, 9]]  vs  Actual: ");
     System.out.println(arrToString(arr2));
     System.out.println("Testing new arrToString");
-    System.out.println("Expected: [[3,4], [5,6,7], []]  vs  Actual: ");
+    System.out.println("Expected: [[3, 4], [5, 6, 7], []]  vs  Actual: ");
     System.out.println(arrToString(arr3));
 
     System.out.println("Testing arr2DSum =");
