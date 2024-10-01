@@ -65,5 +65,4 @@ public static int[][] swapRC(int[][]nums){
       arr[i][a] = nums[a][i];
     }
   }
-  return arr;
-}
+  return arr;}
