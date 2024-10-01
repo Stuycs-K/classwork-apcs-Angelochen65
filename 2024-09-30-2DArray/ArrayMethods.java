@@ -1,13 +1,36 @@
 public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen, ivanc178@nycstudents.net
   public static void main(String[] args) {
     int[] arr1 = {2,3,4,9};
-    System.out.println(arrToString(arr1));
     int[][] arr2 = {{2,3,4}, {5,6,7}, {2,4,9}};
+    int[][] arr3 = {{3,4}, {5,6,7}, {}};
+    int[][] arr4 = {{1, 2, 3}, {4, 5, 6}};
+    int[][] arr4 = {{1, 2}, {4, 5}, {6, 7}, {8,9}};
+
+
+    System.out.println("Previous arrToString: ");
+    System.out.println("Expected: [2,3,4,9]  vs Actual: ");
+    System.out.println(arrToString(arr1));
+
+    System.out.println("Testing new arrToString");
+    System.out.println("Expected: [[2,3,4], [5,6,7], [2,4,9]]  vs  Actual: ");
     System.out.println(arrToString(arr2));
+    System.out.println("Testing new arrToString");
+    System.out.println("Expected: [[3,4], [5,6,7], []]  vs  Actual: ");
+    System.out.println(arrToString(arr3));
+
+    System.out.println("Testing arr2DSum =");
+    Sysmte.out.println("Expected: 42    vs  Actual: ");
     System.out.println(arr2DSum(arr2));
-    System.out.println(42);
-    int[][] arr3 = {{1, 2, 3}, {4, 5, 6}};
+    System.out.println("Testing arr2DSum");
+    Sysmte.out.println("Expected: 25    vs  Actual: ");
+    System.out.println(arr2DSum(arr3));
+
+    System.out.println("Testing swapRC");
+    System.out.println("Expected: [[1, 4], [2, 5], [3, 6]]");
     System.out.println(arrToString(swapRC(arr3)));
+    System.out.println("Testing swapRC");
+    System.out.println("Expected: [[1, 4, 6, 8], [2, 5, 7, 9]]");
+    System.out.println(arrToString(swapRC(arr4)));
   }
 
   public static String arrToString (int[]ary){
