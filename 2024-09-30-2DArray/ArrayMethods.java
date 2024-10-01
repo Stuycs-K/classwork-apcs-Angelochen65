@@ -4,6 +4,8 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     System.out.println(arrToString(arr1));
     int[][] arr2 = {{2,3,4}, {5,6,7}, {2,4,9}};
     System.out.println(arrToString(arr2));
+    System.out.println(arr2DSum(arr2));
+    System.out.println(42);
   }
 
   public static String arrToString (int[]ary){
@@ -40,8 +42,14 @@ public static String arrToString(int[][]ary){
 
 /*Return the sum of all of the values in the 2D array */
 public static int arr2DSum(int[][]nums){
-  return 0;
+  int sums = 0;
+  for(int i = 0; i< nums.length; i++){
+    for int(a = 0; a < nums[i].length; a++){
+      sums+= nums[i][a];
+    }
+  }
   //use a nested loop to solve this
+  return sums;
 }
 
 /**Rotate an array by returning a new array with the rows and columns swapped.
