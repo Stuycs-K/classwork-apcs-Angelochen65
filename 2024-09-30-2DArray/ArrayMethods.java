@@ -27,10 +27,14 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
   */
 public static String arrToString(int[][]ary){
   //this should use arrToString(int[])
-  String result = "";
+  String result = "[";
   for (int i = 0; i < ary.length; i++){
-    result+=aryToString(ary[i]);
+    result+=arrToString(ary[i]);
+    if(i != ary.length-1){
+      end+=", ";
+    }
   }
+  result+="]";
   return result;
 }
 
