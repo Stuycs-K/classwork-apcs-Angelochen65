@@ -31,7 +31,7 @@ public static String arrToString(int[][]ary){
   for (int i = 0; i < ary.length; i++){
     result+=arrToString(ary[i]);
     if(i != ary.length-1){
-      end+=", ";
+      result+=", ";
     }
   }
   result+="]";
