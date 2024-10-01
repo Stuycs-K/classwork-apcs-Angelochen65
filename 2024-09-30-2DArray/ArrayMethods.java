@@ -71,3 +71,4 @@ public static int arr2DSum(int[][]nums){
 
    return arr;
  }
+}
