@@ -5,7 +5,7 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     int[][] arr3 = {{3,4}, {5,6,7}, {}};
     int[][] arr4 = {{1,2,3}, {4,5,6}};
     int[][] arr5= {{1,2}, {4,5}, {6,7}, {8,9}};
-    int[][] arr6 = {{-5, 6, 7},{2,-3,-592},{-15,25,0}};
+    int[][] arr6 = {{-5, 6, 7},{2,-3,-592},{-15,25,2}};
 
 
     System.out.println("Previous arrToString: ");
@@ -33,7 +33,10 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     System.out.println("Expected: [[1, 4, 6, 8], [2, 5, 7, 9]]");
     System.out.println(arrToString(swapRC(arr5)));
 
+    System.out.println("Testing replaceNegative");
+    System.out.print("Original: ");
     System.out.println(arrToString(arr6));
+    System.out.println("Expected: {{0, 6, 7}, {2, 0, -592}, {-15, 25, 2}}   Actual: ");
     replaceNegative(arr6);
     System.out.println(arrToString(arr6));
 
