@@ -122,15 +122,6 @@ public static int arr2DSum(int[][]nums){
 
  }
 
- public static int[] returnCopy (int[]ary){
-   int[] newAry = new int[ary.length];
-   for (int i = 0; i < ary.length; i++){
-     newAry[i] = ary[i];
-   }
-   return newAry;
-
- }
-
  //4. Make a copy of the given 2d array.
 //When testing : make sure that changing the original does NOT change the copy.
 //DO NOT use any built in methods that "copy" an array.
