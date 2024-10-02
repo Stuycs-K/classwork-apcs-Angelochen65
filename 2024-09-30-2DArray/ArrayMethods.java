@@ -33,10 +33,13 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     System.out.println("Expected: [[1, 4, 6, 8], [2, 5, 7, 9]]");
     System.out.println(arrToString(swapRC(arr5)));
 
-
     System.out.println(arrToString(arr6));
     replaceNegative(arr6);
     System.out.println(arrToString(arr6));
+
+    System.out.println(arrToString(arr2));
+    System.out.println(arrToString(copy(arr2)));
+
   }
 
   public static String arrToString (int[]ary){
@@ -110,4 +113,33 @@ public static int arr2DSum(int[][]nums){
      }
    }
  }
+ public static int[] returnCopy (int[]ary){
+   int[] newAry = new int[ary.length];
+   for (int i = 0; i < ary.length; i++){
+     newAry[i] = ary[i];
+   }
+   return newAry;
+
+ }
+
+ public static int[] returnCopy (int[]ary){
+   int[] newAry = new int[ary.length];
+   for (int i = 0; i < ary.length; i++){
+     newAry[i] = ary[i];
+   }
+   return newAry;
+
+ }
+
+ //4. Make a copy of the given 2d array.
+//When testing : make sure that changing the original does NOT change the copy.
+//DO NOT use any built in methods that "copy" an array.
+//You SHOULD write a helper method for this.
+//If you don't see a good way to do that, you should stop and look at prior methods.
+public static int[][] copy(int[][] nums){
+  int[][] arr = new int[nums.length][];
+  for(int i = 0; i< arr.length; i++){
+    arr[i] = returnCopy(nums[i]);
+  }
+  return arr;//placeholder so it compiles
 }
