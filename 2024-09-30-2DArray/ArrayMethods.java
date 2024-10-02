@@ -39,9 +39,10 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
 
     System.out.println(arrToString(arr2));
     System.out.println(arrToString(copy(arr2)));
+    int[][] copied = copy(arr2);
     arr2[0][0] = 99;
     System.out.println(arrToString(arr2));
-    System.out.println(arrToString(copy(arr2)));
+    System.out.println(arrToString(copy(copied)));
 
   }
 
