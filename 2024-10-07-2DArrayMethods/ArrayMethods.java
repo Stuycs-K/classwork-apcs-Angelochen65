@@ -5,6 +5,15 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
+    int[] arr1 = {2,3,4,9};
+    int[][] arr2 = {{2,3,4}, {5,6,7}, {2,4,9}};
+    int[][] arr3 = {{3,4}, {5,6,7}, {}};
+    int[][] arr4 = {{1,2,3}, {4,5,6}};
+    int[][] arr5= {{1,2}, {4,5}, {6,7}, {8,9}};
+    int[][] arr6 = {{-5, 6, 7},{2,-3,-592},{-15,25,2}};
+
+    System.out.println(Arrays.toString(arr1)==arrToString(arr1));
+    System.out.println(Arrays.toString(arr2)==arrToString(arr2))
 
   }
 
