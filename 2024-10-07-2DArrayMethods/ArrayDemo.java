@@ -8,7 +8,7 @@ public class ArrayDemo{
     int[] arr1 = {2,3,4,9};
     int[][] arr2 = {{2,3,4}, {5,6,7}, {2,4,9}};
     int[][] arr3 = {{3,4}, {5,6,7}, {}};
-    int[][] arr4 = {{1,2,3}, {4,5,6}};
+    int[][] arr4 = {{1,2,0}, {4,0,6}};
     int[][] arr5= {{1,2}, {4,5}, {6,7}, {8,9}};
     int[][] arr6 = {{-5, 6, 7},{2,-3,-592},{-15,25,2}};
 
@@ -16,6 +16,8 @@ public class ArrayDemo{
     System.out.println(Arrays.toString(arr2).equals(arrToString(arr2)));
     System.out.println(Arrays.toString(arr2));
     System.out.println(arrToString(arr2));
+    System.out.println(countZeros2D(arr3));
+    System.out.println(countZeros2D(arr4));
 
   }
 
@@ -49,7 +51,14 @@ public class ArrayDemo{
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
-    return 0;
+  int sums = 0;
+  for(int i = 0; i< nums.length; i++){
+    for (int a = 0; a < nums[i].length; a++){
+      if(nums[i][a] == 0){
+        sums++;
+    }
+  }
+  return sums;
   }
 
   //2. Calculate the sum of a 2d array
