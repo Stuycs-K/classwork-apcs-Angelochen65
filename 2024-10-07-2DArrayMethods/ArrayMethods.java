@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class ArrayDemo{
+public class ArrayMethods{
   public static void main(String[]args){
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
