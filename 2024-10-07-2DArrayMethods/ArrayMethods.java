@@ -13,7 +13,7 @@ public class ArrayDemo{
     int[][] arr6 = {{-5, 6, 7},{2,-3,-592},{-15,25,2}};
 
     System.out.println(Arrays.toString(arr1)==arrToString(arr1));
-    System.out.println(Arrays.toString(arr2)==arrToString(arr2))
+    System.out.println(Arrays.toString(arr2)==arrToString(arr2));
 
   }
 
