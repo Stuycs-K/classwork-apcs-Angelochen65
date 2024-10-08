@@ -36,7 +36,7 @@ public class ArrayMethods{ // Angelo Chen, angeloc81@nycstudents.net, Ivan Chen,
     System.out.println("Testing replaceNegative");
     System.out.print("Original: ");
     System.out.println(arrToString(arr6));
-    System.out.println("Expected: {{0, 6, 7}, {2, 0, -592}, {-15, 25, 2}}   Actual: ");
+    System.out.println("Expected: {{1, 6, 7}, {2, 1, 0}, {0, 25, 2}}   Actual: ");
     replaceNegative(arr6);
     System.out.println(arrToString(arr6));
 
