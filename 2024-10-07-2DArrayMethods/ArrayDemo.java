@@ -81,6 +81,15 @@ public class ArrayDemo{
    }
   }
 
+  public static int[] returnCopy (int[]ary){
+   int[] newAry = new int[ary.length];
+   for (int i = 0; i < ary.length; i++){
+     newAry[i] = ary[i];
+   }
+   return newAry;
+
+ }
+
   //4. Make a copy of the given 2d array.
   //When testing : make sure that changing the original does NOT change the copy.
   //DO NOT use any built in methods that "copy" an array.
@@ -102,7 +111,7 @@ public class ArrayDemo{
     int[][] arr = new int[nums[0].length][nums.length];
     for(int i = 0; i < nums[0].length; i++){
       for(int a = 0; a < nums.length; a++){
-        arr[i][a] = nums[a][i];
+        arr[i][a] = nums[a][i];f
     }
   }
     return arr;
