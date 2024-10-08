@@ -14,6 +14,8 @@ public class ArrayDemo{
 
     System.out.println(Arrays.toString(arr1).equals(arrToString(arr1)));
     System.out.println(Arrays.toString(arr2).equals(arrToString(arr2)));
+    System.out.println(Arrays.toString(arr2));
+    System.out.println(arrToString(arr2));
 
   }
 
