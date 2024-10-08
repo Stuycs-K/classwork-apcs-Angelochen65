@@ -58,8 +58,10 @@ public class ArrayDemo{
         sums++;
     }
   }
-  return sums;
+
   }
+    return sums;
+}
 
   //2. Calculate the sum of a 2d array
   /*Return the sum of all of the values in the 2D array
