@@ -12,9 +12,8 @@ public class ArrayDemo{
     int[][] arr5= {{1,2}, {4,5}, {6,7}, {8,9}};
     int[][] arr6 = {{-5, 6, 7},{2,-3,-592},{-15,25,2}};
 
-    System.out.println(Arrays.toString(arr1));
-    System.out.println(arrToString(arr1));
-    System.out.println(Arrays.toString(arr2)==arrToString(arr2));
+    System.out.println(Arrays.toString(arr1).equals(arrToString(arr1)));
+    System.out.println(Arrays.toString(arr2).equals(arrToString(arr2)));
 
   }
 
