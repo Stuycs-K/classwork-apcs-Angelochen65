@@ -111,7 +111,7 @@ public class ArrayDemo{
     int[][] arr = new int[nums[0].length][nums.length];
     for(int i = 0; i < nums[0].length; i++){
       for(int a = 0; a < nums.length; a++){
-        arr[i][a] = nums[a][i];f
+        arr[i][a] = nums[a][i];
     }
   }
     return arr;
