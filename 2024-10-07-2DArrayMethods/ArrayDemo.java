@@ -35,6 +35,14 @@ public class ArrayDemo{
     System.out.println(arr2DSum(arr4));
     System.out.print("\n");
 
+    System.out.println("Testing swapRC");
+    System.out.println("Expected: [[1, 4], [2, 5], [3, 6]]");
+    System.out.println(arrToString(swapRC(arr4)));
+    System.out.println("Testing swapRC");
+    System.out.println("Expected: [[1, 4, 6, 8], [2, 5, 7, 9]]");
+    System.out.println(arrToString(swapRC(arr5)));
+    System.out.print("\n");
+
     System.out.println("Testing replaceNegative");
     System.out.print("Original: ");
     System.out.println(arrToString(arr6));
@@ -51,6 +59,10 @@ public class ArrayDemo{
     System.out.println("Checking to see if modifying arr2 changes copy: ");
     System.out.println(arrToString(arr2));
     System.out.println(arrToString(copied));
+
+    System.out.println("Testing htmlTable");
+    System.out.println("Expected: \n <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>. \n Actual:  ");
+    System.out.println(htmlTable(new int[][] {{1, 2}, {3}}));
 
   }
 
@@ -170,6 +182,16 @@ public class ArrayDemo{
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-    return "";
+    String table = "<table>";
+    for(int i = 0; i < nums.length; i++){
+      table+="<tr>";
+      for(int a = 0; a < nums[i].length; a++){
+        table += "<td>";
+        table += nums[i][a];
+        table += "</td>";
+      }
+      table+="</tr>";
+    }
+    table += "</table>";
   }
 }
