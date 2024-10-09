@@ -32,13 +32,13 @@ public class ArrayDemo{
     System.out.println(arr2DSum(arr3));
     System.out.println(arrToString(arr4));
     System.out.print("Expected: 13.   Actual: ");
-    System.out.print(arr2DSum(arr4));
+    System.out.println(arr2DSum(arr4));
     System.out.print("\n");
 
     System.out.println("Testing replaceNegative");
     System.out.print("Original: ");
     System.out.println(arrToString(arr6));
-    System.out.println("Expected: \n {{1, 6, 7}, {2, 1, 0}, {0, 25, 2}} \n  Actual: ");
+    System.out.println("Expected: \n [[1, 6, 7], [2, 1, 0], [0, 25, 2]] \n  Actual: ");
     replaceNegative(arr6);
     System.out.println(arrToString(arr6));
     System.out.print("\n");
