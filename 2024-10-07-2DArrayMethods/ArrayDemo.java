@@ -48,7 +48,7 @@ public class ArrayDemo{
     System.out.println(arrToString(copy(arr2)));
     int[][] copied = copy(arr2);
     arr2[0][0] = 99;
-    System.out.println("Checking to see if modifying arr2 changes copy: ")
+    System.out.println("Checking to see if modifying arr2 changes copy: ");
     System.out.println(arrToString(arr2));
     System.out.println(arrToString(copied));
 
