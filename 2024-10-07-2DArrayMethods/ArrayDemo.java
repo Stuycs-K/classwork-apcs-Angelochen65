@@ -29,11 +29,28 @@ public class ArrayDemo{
     System.out.println("Testing sum");
     System.out.println(arrToString(arr3));
     System.out.print("Expected: 25.   Actual: ");
-    System.out.print(arr2DSum(arr3));
+    System.out.println(arr2DSum(arr3));
     System.out.println(arrToString(arr4));
     System.out.print("Expected: 13.   Actual: ");
     System.out.print(arr2DSum(arr4));
+    System.out.print("\n");
 
+    System.out.println("Testing replaceNegative");
+    System.out.print("Original: ");
+    System.out.println(arrToString(arr6));
+    System.out.println("Expected: {{1, 6, 7}, {2, 1, 0}, {0, 25, 2}}   Actual: ");
+    replaceNegative(arr6);
+    System.out.println(arrToString(arr6));
+    System.out.print("\n");
+
+    System.out.println("Testing return copy");
+    System.out.println(arrToString(arr2));
+    System.out.println(arrToString(copy(arr2)));
+    int[][] copied = copy(arr2);
+    arr2[0][0] = 99;
+    System.out.println("Checking to see if modifying arr2 changes copy: ")
+    System.out.println(arrToString(arr2));
+    System.out.println(arrToString(copied));
 
   }
 
