@@ -15,13 +15,25 @@ public class ArrayDemo{
     System.out.println(Arrays.toString(arr1).equals(arrToString(arr1)));
     System.out.print("Testing arrToString for 2D Arrays: ");
     System.out.println(Arrays.deepToString(arr2).equals(arrToString(arr2)));
+    System.out.print("\n");
 
+    System.out.print("Testing countZeros");
     System.out.println(arrToString(arr3));
     System.out.print("Expected: 0.   Actual: ");
     System.out.println(countZeros2D(arr3));
     System.out.println(arrToString(arr4));
-    System.out.println("Expected: 2.  Actual: ");
+    System.out.print("Expected: 2.  Actual: ");
     System.out.println(countZeros2D(arr4));
+    System.out.print("\n");
+
+    System.out.println("Testing sum");
+    System.out.println(arrToString(arr3));
+    System.out.print("Expected: 25.   Actual: ");
+    System.out.print(arr2DSum(arr3));
+    System.out.println(arrToString(arr4));
+    System.out.print("Expected: 13.   Actual: ");
+    System.out.print(arr2DSum(arr4));
+
 
   }
 
