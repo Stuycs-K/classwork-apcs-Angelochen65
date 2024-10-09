@@ -11,6 +11,7 @@ public class ArrayDemo{
     int[][] arr4 = {{1,2,0}, {4,0,6}};
     int[][] arr5= {{1,2}, {4,5}, {6,7}, {8,9}};
     int[][] arr6 = {{-5, 6, 7},{2,-3,-592},{-15,25,2}};
+    int[][] arr7 = {{1,2,3}, {1,2}};
     System.out.print("Testing arrToString for 1D Arrays: ");
     System.out.println(Arrays.toString(arr1).equals(arrToString(arr1)));
     System.out.print("Testing arrToString for 2D Arrays: ");
@@ -63,6 +64,8 @@ public class ArrayDemo{
     System.out.println("Testing htmlTable");
     System.out.println("Expected: \n <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>. \n Actual:  ");
     System.out.println(htmlTable(new int[][] {{1, 2}, {3}}));
+    System.out.println("Expected: \n <table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>1</td><td>2</td></tr></table>. \n Actual: ")
+    System.out.println(htmlTable(arr7));
 
   }
 
