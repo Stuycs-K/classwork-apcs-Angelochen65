@@ -20,7 +20,7 @@ public class ArrayDemo{
     System.out.print("Expected: 0.   Actual: ");
     System.out.println(countZeros2D(arr3));
     System.out.println(arrToString(arr4));
-    System.out.println("Expected: 2.  Actual: ")
+    System.out.println("Expected: 2.  Actual: ");
     System.out.println(countZeros2D(arr4));
 
   }
