@@ -193,5 +193,6 @@ public class ArrayDemo{
       table+="</tr>";
     }
     table += "</table>";
+    return table;
   }
 }
