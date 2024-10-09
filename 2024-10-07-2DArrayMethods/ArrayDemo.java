@@ -64,7 +64,7 @@ public class ArrayDemo{
     System.out.println("Testing htmlTable");
     System.out.println("Expected: \n <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>. \n Actual:  ");
     System.out.println(htmlTable(new int[][] {{1, 2}, {3}}));
-    System.out.println("Expected: \n <table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>1</td><td>2</td></tr></table>. \n Actual: ")
+    System.out.println("Expected: \n <table><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>1</td><td>2</td></tr></table>. \n Actual: ");
     System.out.println(htmlTable(arr7));
 
   }
