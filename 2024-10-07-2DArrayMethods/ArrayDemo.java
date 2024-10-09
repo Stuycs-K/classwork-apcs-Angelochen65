@@ -11,12 +11,16 @@ public class ArrayDemo{
     int[][] arr4 = {{1,2,0}, {4,0,6}};
     int[][] arr5= {{1,2}, {4,5}, {6,7}, {8,9}};
     int[][] arr6 = {{-5, 6, 7},{2,-3,-592},{-15,25,2}};
-
+    System.out.print("Testing arrToString for 1D Arrays: ");
     System.out.println(Arrays.toString(arr1).equals(arrToString(arr1)));
-    System.out.println(Arrays.toString(arr2).equals(arrToString(arr2)));
-    System.out.println(Arrays.toString(arr2));
-    System.out.println(arrToString(arr2));
+    System.out.print("Testing arrToString for 2D Arrays: ");
+    System.out.println(Arrays.deepToString(arr2).equals(arrToString(arr2)));
+
+    System.out.println(arrToString(arr3));
+    System.out.print("Expected: 0.   Actual: ");
     System.out.println(countZeros2D(arr3));
+    System.out.println(arrToString(arr4));
+    System.out.println("Expected: 2.  Actual: ")
     System.out.println(countZeros2D(arr4));
 
   }
