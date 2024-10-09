@@ -37,7 +37,7 @@ public class ArrayDemo{
     System.out.print("\n");
 
     System.out.println("Testing swapRC");
-    System.out.println("Expected: [[1, 4], [2, 5], [3, 6]]");
+    System.out.println("Expected: [[1, 4], [2, 0], [0, 6]]");
     System.out.println(arrToString(swapRC(arr4)));
     System.out.println("Testing swapRC");
     System.out.println("Expected: [[1, 4, 6, 8], [2, 5, 7, 9]]");
