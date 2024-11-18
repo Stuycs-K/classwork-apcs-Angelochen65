@@ -36,6 +36,7 @@ public class TriangleTester {
 
     public static int countTrianglesB(String filename){
       int total = 0;
+      
       try {
         String all = "";
         Scanner input = new Scanner(new File(filename));
