@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ArrayListPractice {
 
@@ -13,6 +14,17 @@ public class ArrayListPractice {
     System.out.println(Square);
     System.out.println(makeReversedList(Triangle));
     System.out.println(mixedLists(Triangle, Square));
+    String[] array = new String[]{"1","3","5"};
+    ArrayList<String> list =
+                new ArrayList<String>(Arrays.asList(array));
+    System.out.println(list);
+    String[] array1 = new String[]{"2","4","6","8","10"};
+    ArrayList<String> list1 =
+                new ArrayList<String>(Arrays.asList(array1));
+    System.out.println(mixedLists(list,list1));
+    System.out.println(makeReversedList(mixedLists(list,list1)));
+
+
   }
 
   public static ArrayList<String> createRandomArray(int size){
