@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+
 public class day1part1{
   int vertical = 0;
   int horizontal = 0;
@@ -19,15 +20,32 @@ public class day1part1{
 
        ArrayList<String> pos = new ArrayList<String>();
        pos.add("north");
+       System.out.println(pos.get(0));
+       System.out.println(pos.get(0).equals("north"));
 
       try {
         Scanner input = new Scanner(new File(filename));
         input.useDelimiter(", ");
+
         while (input.hasNext()) {
-          // if(pos.equals("north") && input.next)
-            
+          String nextToken= input.next();
 
-
+          changeDirection(pos, nextToken.substring(0,1));
+          int dist = Integer.parseInt(nextToken.substring(1));
+            if(pos.get(0).equals("north")){
+              vert+= dist;
+            }
+            if(pos.get(0).equals("south")){
+              vert-= dist;
+            }
+            if(pos.get(0).equals("east")){
+              hori+= dist;
+            }
+            if(pos.get(0).equals("west")){
+              hori -= dist;
+            }
+       //
+       //
        }
             input.close();
           } catch (FileNotFoundException e) {
@@ -36,31 +54,31 @@ public class day1part1{
           return Math.abs(vert)+Math.abs(hori);
         }
 
-        public void changeDirection(ArrayList<String> arr, String b){
-          if(a[0].equals("north") && b.equals("R")){
-            a.set(0, "east");
+        public static void changeDirection(ArrayList<String> arr, String b){
+          if(arr.get(0).equals("north") && b.equals("R")){
+            arr.set(0, "east");
           }
-          else if(a[0].equals("north") && b.equals("L")){
-            a.set(0, "west");
+          else if(arr.get(0).equals("north") && b.equals("L")){
+            arr.set(0, "west");
           }
 
-          if(a[0].equals("east") && b.equals("R")){
-            a.set(0, "south");
+          if(arr.get(0).equals("east") && b.equals("R")){
+            arr.set(0, "south");
           }
-          else if(a[0].equals("east") && b.equals("L")){
-            a.set(0, "north");
+          else if(arr.get(0).equals("east") && b.equals("L")){
+            arr.set(0, "north");
           }
-          if(a[0].equals("south") && b.equals("R")){
-            a.set(0, "west");
+          if(arr.get(0).equals("south") && b.equals("R")){
+            arr.set(0, "west");
           }
-          else if(a[0].equals("north") && b.equals("L")){
-            a.set(0, "east");
+          else if(arr.get(0).equals("north") && b.equals("L")){
+            arr.set(0, "east");
           }
-          if(a[0].equals("west") && b.equals("R")){
-            a.set(0, "north");
+          if(arr.get(0).equals("west") && b.equals("R")){
+            arr.set(0, "north");
           }
-          else if(a[0].equals("west") && b.equals("L")){
-            a.set(0, "south");
+          else if(arr.get(0).equals("west") && b.equals("L")){
+            arr.set(0, "south");
           }
 
         }
