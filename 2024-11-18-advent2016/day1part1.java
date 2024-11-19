@@ -25,9 +25,11 @@ public class day1part1{
 
       try {
         Scanner input = new Scanner(new File(filename));
-        input.useDelimiter(", ");
+          input.useDelimiter(",\\s*");
+
 
         while (input.hasNext()) {
+
           String nextToken= input.next();
 
           changeDirection(pos, nextToken.substring(0,1));
