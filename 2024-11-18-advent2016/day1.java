@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 
-public class day1part1{
+public class day1{
   int vertical = 0;
   int horizontal = 0;
 
