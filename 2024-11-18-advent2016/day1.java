@@ -107,7 +107,17 @@ public class day1{
         else{
           direction=(direction+3)%4;
         }
-        
+        int dist = Integer.parseInt(texts[i].substring(1));
+        for(int a = 0; a < dist; a++){
+          sides[direction]++;
+          y = sides[0] - sides[2];
+          x = sides[1] - sides[3];
+          if(places.indexOf(x + "," + y) < 0){
+          places.add(x + "," + y); }
+          else{
+            return Math.abs(x) + Math.abs(y);
+          }
+        }
 
         }
         return 0;
