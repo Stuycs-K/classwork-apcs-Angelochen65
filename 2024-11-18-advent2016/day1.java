@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class day1{
@@ -9,7 +10,9 @@ public class day1{
   int horizontal = 0;
 
   public static void main(String[] args){
-    System.out.println(countBlocks("taxicab.txt"));
+    // System.out.println(countBlocks("taxicab.txt"));
+    System.out.println(revisit("taxicab.txt"));
+
 
     }
 
@@ -77,7 +80,26 @@ public class day1{
             arr.set(0, "south");
         }
     }
+    public static int revisit(String filename){
+      ArrayList<String> places = new ArrayList<String>();
+      places.add("0,0");
+      String text = "";
+      try {
+        Scanner input = new Scanner(new File(filename));
+        while (input.hasNextLine()) {
 
+          text = text +  input.nextLine();
 
+       }
+            input.close();
+          } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + filename);
+          }
+      String[] texts = text.split(", ");
+      System.out.println(Arrays.toString(texts));
+      // System.out.println(text);
+      // System.out.println(places);
+      return 0;
+    }
 
-}
+    }
