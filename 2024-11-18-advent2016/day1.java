@@ -10,7 +10,7 @@ public class day1{
   int horizontal = 0;
 
   public static void main(String[] args){
-    // System.out.println(countBlocks("taxicab.txt"));
+    System.out.println(countBlocks("taxicab.txt"));
     System.out.println(revisit("taxicab.txt"));
 
 
