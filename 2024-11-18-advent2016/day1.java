@@ -81,25 +81,38 @@ public class day1{
         }
     }
     public static int revisit(String filename){
+      int direction = 0;
+      int x = 0;
+      int y = 0;
+      int[] sides = new int[]{0,0,0,0};
       ArrayList<String> places = new ArrayList<String>();
       places.add("0,0");
       String text = "";
       try {
         Scanner input = new Scanner(new File(filename));
         while (input.hasNextLine()) {
-
           text = text +  input.nextLine();
-
        }
             input.close();
           } catch (FileNotFoundException e) {
             System.out.println("File not found: " + filename);
           }
+
       String[] texts = text.split(", ");
       System.out.println(Arrays.toString(texts));
-      // System.out.println(text);
-      // System.out.println(places);
-      return 0;
-    }
+      for(int i = 0; i < texts.length; i++){
+        if(texts[i].charAt(0)=='R'){
+          direction=(direction+1)%4; }
+
+        else{
+          direction=(direction+3)%4;
+        }
+        
+
+        }
+        return 0;
+
+      }
+
 
     }
