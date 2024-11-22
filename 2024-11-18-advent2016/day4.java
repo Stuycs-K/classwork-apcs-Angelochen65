@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-<<<<<<< HEAD
+
 public class day4{
   public static void main(String[] args){
     System.out.println(realRoom("room.txt"));
