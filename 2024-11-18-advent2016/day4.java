@@ -16,7 +16,7 @@ public class day4{
   public static int realRoom(String filename){
     int total = 0;
     int large = 1;
-    char ch1 = 'x';
+
     ArrayList<String> rooms = new ArrayList<String>();
     ArrayList<Character> repeats = new ArrayList<Character>();
     ArrayList<Character> check = new ArrayList<Character>();
@@ -34,68 +34,63 @@ public class day4{
     } catch (FileNotFoundException e) {
         System.out.println("File not found: " + filename);
     }
-    for(int i = 0; i < 1; i++){
+    for(int i = 0; i < rooms.size(); i++){
+      char ch1 = 'A';
       String match = "";
+      check = new ArrayList<Character>();
 
       repeats = new ArrayList<Character>();
       nums = new ArrayList<Integer>();
       letters = rooms.get(i).split("-");
-      for(int a = 0; a < letters.length-1; a++){
-        for(int b = 0; b < letters[a].length(); b++){
-          if(repeats.indexOf(letters[a].charAt(b))<0){
-            repeats.add(letters[a].charAt(b));
-            nums.add(1);
-          }
-          else{
-            nums.set(repeats.indexOf(letters[a].charAt(b)), nums.get(repeats.indexOf(letters[a].charAt(b)))+1);
-          }
-        }
+      String roomName = "";
+             for (int j = 0; j < letters.length - 1; j++) {
+                 roomName += letters[j];
+             }
+             String lastPart = letters[letters.length - 1];
 
+             int idIndex = lastPart.indexOf('[');
+             int sectorID = Integer.parseInt(lastPart.substring(0, idIndex));
+             String checksum = lastPart.substring(idIndex + 1, lastPart.length() - 1);
 
+             for (int j = 0; j < roomName.length(); j++) {
+                 char ch = roomName.charAt(j);
+                 if (repeats.indexOf(ch) < 0) {
+                     repeats.add(ch);
+                     nums.add(1);
+                 } else {
+                     int index = repeats.indexOf(ch);
+                     nums.set(index, nums.get(index) + 1);
+                 }
+             }
 
-          }
-          for(int x = 0; x < 5; x++){
-          large = 1;
+             for (int x = 0; x < repeats.size(); x++) {
+                 for (int y = x + 1; y < repeats.size(); y++) {
+                     if (nums.get(x) < nums.get(y) || (nums.get(x).equals(nums.get(y)) && repeats.get(x) > repeats.get(y))) {
+                         int tempNum = nums.get(x);
+                         nums.set(x, nums.get(y));
+                         nums.set(y, tempNum);
 
-          for(int largest = 0; largest < nums.size(); largest++){
+                         char tempChar = repeats.get(x);
+                         repeats.set(x, repeats.get(y));
+                         repeats.set(y, tempChar);
+                     }
+                 }
+             }
 
-            // System.out.print(nums.get(largest) + " ");
-            if(nums.get(largest)>large){
-              if(nums.get(largest)==large){
-                if(ch1 > repeats.get(largest)){
-                  ch1 = repeats.get(largest);
-                }
-              }
+             for (int j = 0; j < Math.min(5, repeats.size()); j++) {
+                 match += repeats.get(j);
+             }
+    if(checksum.equals(match)){
+      total+= sectorID;
 
-              large = nums.get(largest);
-              ch1 = repeats.get(largest);
-              System.out.println(ch1);
-              System.out.println(large);
-
-            }
-      }
-      System.out.println(ch1);
-      // System.out.println(nums);
-      // System.out.println(repeats);
-      repeats.remove(nums.indexOf(large));
-      nums.remove(nums.indexOf(large));
-      System.out.println(nums);
-      System.out.println(repeats);
-      check.add(ch1);
-      System.out.println(check);
     }
-    for(int p = 0; p < check.size(); p++){
-      match= match + check.get(p);
-    }
-    System.out.println(match);
+
 
 
     }
 
-    // System.out.println(repeats);
-    // System.out.println(nums);
-    // System.out.println(rooms);
-    return 0;
+
+    return total;
 
   }
   /*
