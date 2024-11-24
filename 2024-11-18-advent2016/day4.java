@@ -15,13 +15,9 @@ public class day4{
 
   public static int realRoom(String filename){
     ArrayList<String> rooms = new ArrayList<String>();
-    ArrayList<Character> alphabet = new ArrayList<Character>();
-    for(int i = 'a'; i <= 'z'; i++){
-      alphabet.add((char) i);
-    }
-    int[] amount = new int[26];
-    System.out.println(alphabet);
-    System.out.println(Arrays.toString(amount));
+    int total = 0;
+
+
 
     try {
         Scanner input = new Scanner(new File(filename));
@@ -34,33 +30,59 @@ public class day4{
     } catch (FileNotFoundException e) {
         System.out.println("File not found: " + filename);
     }
-    for(int i = 0; i < 1; i++){
+    for(int i = 0; i < rooms.size(); i++){
+      ArrayList<Character> alphabet = new ArrayList<Character>();
+      for(int alph = 'a'; alph <= 'z'; alph++){
+        alphabet.add((char) alph);
+      }
+      ArrayList<Integer> amount = new ArrayList<Integer>();
+      for(int lets = 0; lets < 27; lets++){
+        amount.add(0);
+      }
+      String code = "";
       String[] thisRoom = (rooms.get(i)).split("-");
-      System.out.println(Arrays.toString(thisRoom));
       String endPart = (thisRoom[thisRoom.length-1]);
-      System.out.println(endPart);
+      // System.out.println(endPart);
       int bracket = endPart.indexOf("[");
       int roomNum = Integer.parseInt(endPart.substring(0,bracket));
       String real = endPart.substring(bracket + 1, endPart.length() - 1);
-      System.out.println(""+ bracket + " " + roomNum);
-      System.out.println(real);
-      System.out.print(Arrays.toString(thisRoom));
-      System.out.println(thisRoom.length);
-      System.out.println(" " + thisRoom[0].substring(0, 1));
       for(int roomSplit = 0; roomSplit < thisRoom.length - 1; roomSplit++){
         for(int indChar = 0; indChar < thisRoom[roomSplit].length(); indChar++ ){
-        amount[alphabet.indexOf(thisRoom[roomSplit].charAt(indChar))]++;
-        System.out.println(thisRoom[roomSplit].charAt(indChar));
+          amount.set(alphabet.indexOf(thisRoom[roomSplit].charAt(indChar)), amount.get(alphabet.indexOf(thisRoom[roomSplit].charAt(indChar)))+1);
+
         }
+
       }
-      System.out.println(alphabet);
-      System.out.println(Arrays.toString(amount));
+      for(int five = 0; five < 5; five++){
+
+        int ind = 0;
+        int largest = 0;
+        for(int big = 0; big < amount.size(); big++){
+          if(amount.get(big) > largest){
+            largest = amount.get(big);
+            ind = big;
+          }
+
+        }
+        code = code + String.valueOf(alphabet.get(ind));
+        amount.remove(ind);
+        alphabet.remove(ind);
+      }
+      if(code.equals(real)){
+        total += roomNum;
+      }
+
+
+
+      // System.out.println(alphabet);
+      // System.out.println((amount));
+      // System.out.println(code);
 
 
 
     }
 
-    return 1;
+    return total;
 
 
   }
