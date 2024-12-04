@@ -6,26 +6,34 @@ public class ColorDemo{
   System.out.print( "\u001b[" + foreground + ";" + (10+background) + "m");
 }
 
-  public static void color(int foreground, int background, int modifier){
-  System.out.print( "\u001b[" + foreground + ";" + (10+background) +  ";" + modifier + "m");
-}
-
-public static void go(int r,int c){
-  System.out.print("\u001b[" + r + ";" + c + "f");
-}
   public static void main(String[] args){
-
-    //     for(int r = 0; r < 256; r+=12){
-    //   for(int g = 0; g <= 256; g+=42){
-    //     for(int b = 0; b <= 256; b+=12){
-    //       System.out.print("\u001b[38;2;"+r+";"+g+";"+b+";7m.");
-    //     }
-    //   }
-    //     System.out.println();
-    // }
-
     int space = 50;
     int tree = 1;
+    int random;
+    for(int i = 0; i < space; i++){
+      System.out.print("\u001b[0m ");
+
+    }
+      color(0, 33);
+    System.out.print("  ");
+    System.out.println("\u001b[0m");
+    for(int i = 0; i < space-2; i++){
+      System.out.print("\u001b[0m ");
+
+    }
+    color(0, 33);
+    System.out.print("      ");
+    System.out.println("\u001b[0m");
+    for(int i = 0; i < space; i++){
+      System.out.print("\u001b[0m ");
+
+    }
+    color(0, 33);
+    System.out.print("  ");
+    System.out.println("\u001b[0m");
+
+
+
     while(space >= 40){
       for(int i = 0; i < space; i++){
         System.out.print("\u001b[0m ");
@@ -34,6 +42,13 @@ public static void go(int r,int c){
       color(0, GREEN);
 
       for(int a = 0; a < tree; a++){
+        random = (int) (Math.random() * 10);
+        if(random < 9){
+          color(0, GREEN);
+        }
+        else{
+          color(0, 37);
+        }
         System.out.print("  ");
       }
       System.out.println("\u001b[0m");
@@ -48,9 +63,15 @@ public static void go(int r,int c){
         System.out.print("\u001b[0m ");
 
       }
-      color(0, GREEN);
 
       for(int a = 0; a < tree; a++){
+        random = (int) (Math.random() * 10);
+        if(random < 9){
+          color(0, GREEN);
+        }
+        else{
+          color(0, 36);
+        }
         System.out.print("  ");
       }
       System.out.println("\u001b[0m");
@@ -60,19 +81,40 @@ public static void go(int r,int c){
     }
     space +=4;
     tree-=4;
+
     while(space >= 20){
       for(int i = 0; i < space; i++){
         System.out.print("\u001b[0m ");
 
       }
-      color(0, GREEN);
 
       for(int a = 0; a < tree; a++){
+        random = (int) (Math.random() * 10);
+        if(random < 9){
+          color(0, GREEN);
+        }
+        else{
+          color(0, 34);
+        }
+
         System.out.print("  ");
       }
       System.out.println("\u001b[0m");
       tree+=2;
       space -= 2;
+
+    }
+    space=47;
+
+    for(int a = 0; a < 7; a++){
+      for(int i = 0; i < space; i++){
+        System.out.print("\u001b[0m ");
+
+      }
+      for(int i = 0; i < 7; i++){
+        System.out.print("\u001b[48;2;76;43;42m ");
+      }
+      System.out.println("\u001b[0m");
 
     }
 
