@@ -25,7 +25,7 @@ public class Reaper extends Adventurer{
   */
   //give it a short name (fewer than 13 characters)
   public String getSpecialName(){
-    return "Tornado Slice"
+    return "souls";
   }
   //accessor methods
   public int getSpecial();
@@ -37,7 +37,10 @@ public class Reaper extends Adventurer{
     support their allys
   */
   //hurt or hinder the target adventurer
-  public  String attack(Adventurer other);
+  public  String attack(Adventurer other){
+    other.applyDamage();
+    return "Ouchies! " + other.getName() + "HP now at " + other.getHP();
+  }
 
   //heall or buff the target adventurer
   public  String support(Adventurer other);
