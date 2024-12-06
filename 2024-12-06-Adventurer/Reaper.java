@@ -1,10 +1,14 @@
 public class Reaper extends Adventurer{
+  private int souls, maxSouls;
   public Reaper(String name){
       super(name);
   }
 
-  public Reaper(String name, int hp){
+  public Reaper(String name, int hp, int souls){
       super(name, hp);
+      this.souls = souls;
+      this.maxSouls = souls;
+
   }
 
   //concrete method written using abstract methods.
@@ -28,9 +32,15 @@ public class Reaper extends Adventurer{
     return "souls";
   }
   //accessor methods
-  public int getSpecial();
-  public void setSpecial(int n);
-  public int getSpecialMax();
+  public int getSpecial(){
+    return this.souls;
+  }
+  public void setSpecial(int n){
+    souls = n;
+  }
+  public int getSpecialMax(){
+    return maxSouls;
+  }
 
   /*
     all adventurers must have a way to attack enemies and
@@ -38,16 +48,26 @@ public class Reaper extends Adventurer{
   */
   //hurt or hinder the target adventurer
   public  String attack(Adventurer other){
-    other.applyDamage();
+    other.applyDamage(5);
     return "Ouchies! " + other.getName() + "HP now at " + other.getHP();
   }
 
   //heall or buff the target adventurer
-  public  String support(Adventurer other);
+  public  String support(Adventurer other){
+    other.setHP(other.getHP()+ 5);
+    return "Hooray! " + other.getName() + "HP now at " + other.getHP();
+  }
 
   //heall or buff self
-  public  String support();
+  public  String support(){
+    setHP(this.getHP() + 5);
+    return "";
+  }
 
   //hurt or hinder the target adventurer, consume some special resource
-  public  String specialAttack(Adventurer other);
+  public  String specialAttack(Adventurer other){
+    other.applyDamage(5 + 2*souls);
+    souls -= 1;
+    return ;
+  }
 }
