@@ -49,25 +49,25 @@ public class Reaper extends Adventurer{
   //hurt or hinder the target adventurer
   public  String attack(Adventurer other){
     other.applyDamage(5);
-    return "Ouchies! " + other.getName() + "HP now at " + other.getHP();
+    return "Ouchies! " + other.getName() + " HP now at " + other.getHP();
   }
 
   //heall or buff the target adventurer
   public  String support(Adventurer other){
     other.setHP(other.getHP()+ 5);
-    return "Hooray! " + other.getName() + "HP now at " + other.getHP();
+    return "Hooray! " + other.getName() + " HP now at " + other.getHP();
   }
 
   //heall or buff self
   public  String support(){
     setHP(this.getHP() + 5);
-    return "";
+    return "Woah! Hp now at " + this.getHP();
   }
 
   //hurt or hinder the target adventurer, consume some special resource
   public  String specialAttack(Adventurer other){
     other.applyDamage(5 + 2*souls);
     souls -= 1;
-    return ;
+    return "Ouchies! " + other.getName() + " HP now at " + other.getHP() + " souls: " + this.getSpecial();
   }
 }
