@@ -18,6 +18,8 @@ public class Game{
     String action = userInput.nextLine();
 
     while(!action.equals("quit")){
+      /*Conan, 5/16 HP, 19/20 Rage */
+      System.out.println(Player.getName() + " " + Player.getHP() + "/" + Player.getmaxHP() + "HP," )
       System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
       action = userInput.nextLine();
     }
